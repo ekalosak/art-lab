@@ -1,0 +1,8 @@
+Name:                art-lab
+Version:             0.1
+License-file:        LICENSE
+Author:              Eric Kalosa-Kenyon <ekalosak@gmail.com>
+build-depends:       base
+
+Executable:          artLab
+Main-Is:             Main.hs
