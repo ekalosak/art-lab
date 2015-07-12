@@ -79,3 +79,5 @@ The end product should be portable to an Arduino
     MUSIC OUT
     Using various pre-loaded example collective configurations
     editable {\em a priori} on a computer for live shows.
+    Arduino MIDI controller: http://lifehacker.com/build-your-own-16-button-midi-controller-with-an-arduin-1614628540
+    Guitar pedal: http://www.electrosmash.com/pedalshield
