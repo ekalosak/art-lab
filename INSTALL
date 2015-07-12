@@ -2,3 +2,4 @@ You'll need the Haskell package (google it)
 Then you'll need to install the followind dependencies if you haven't already:
     cabal: Haskell package manager
     quickcheck: Haskell automated unit test generator
+    Hunit: unit test utility for Haskell
