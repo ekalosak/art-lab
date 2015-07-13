@@ -62,22 +62,11 @@ Lorenz's waterweel and strange attractors,
 Category theory e.g., Goodwillie calculus and
     Dmitry Vagner's work,
 Haskell's category theoretical construction,
+Charlie Roberts at UC Santa Barbra,
+Electric Sheep,
 
 STRUCTURE:
 This package is structured according to the outline provided
     on:
     https://wiki.haskell.org/Structure_of_a_Haskell_project
 
-DREAM
-The end product should be portable to an Arduino
-    via e.g., hArduino and the Adafruit "Wave Shield"
-    and a MIDI shield so that an end user can hook:
-    ARDUINO ---- MIDI ---- Human
-       |                    |
-      AMP-------INSTRUMENT--|
-       |
-    MUSIC OUT
-    Using various pre-loaded example collective configurations
-    editable {\em a priori} on a computer for live shows.
-    Arduino MIDI controller: http://lifehacker.com/build-your-own-16-button-midi-controller-with-an-arduin-1614628540
-    Guitar pedal: http://www.electrosmash.com/pedalshield

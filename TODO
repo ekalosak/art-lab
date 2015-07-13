@@ -1,3 +1,69 @@
-Skeleton the package
-Write some damn code
+TODO
+1. Design project
 
+DREAM PRODUCT
+The end product should be portable to an Arduino
+    via e.g., hArduino and the Adafruit "Wave Shield"
+    and a MIDI shield so that an end user can hook:
+
+    ARDUINO ---- MIDI ---- Human
+       |                    |
+      AMP-------INSTRUMENT--|
+       |
+    MUSIC OUT
+    
+    Using various pre-loaded example collective configurations
+    editable {\em a priori} on a computer for live shows.
+    Arduino MIDI controller: http://lifehacker.com/build-your-own-16-button-midi-controller-with-an-arduin-1614628540
+    Guitar pedal: http://www.electrosmash.com/pedalshield
+
+    Alternatively:
+
+    MIDI---COMPUTER---AUDIO OUT
+     |      |            |
+     \---Human------INSTRUMENT
+
+    To use, I imagine a human setting up a basic config,
+    setting it to "go", perhaps some livecoding goes on,
+    then interface via midi and play alongside with
+    a real instrument.
+
+EFFECTS
+    Sample rate (bitcrushing)
+    Scale-setting (i.e., scale1=['bf1','c2','ef2',...])
+    Distortion
+    Panning
+
+INSTRUMENTS
+    Synth
+    Drums
+    Samples
+
+ARTWORK
+    Particle simulation in a field
+
+RULES
+    RULE GENERATORS
+        Metarules for creating collectives, artists,
+        rules, instruments, etc. kinda like the C=CAT
+    SIGNAL GENERATORS/PROCESSORS
+        Rotations of groups modulo primes
+        States of chaotic systems
+        Markov models
+        User input
+        Neural nets / rand forests / other ML
+        Weather, etc.
+        Abstract mathematical objects and morphisms
+
+USER INPUT
+    User input can be grabbed and processed by an artist.
+
+PACKAGES (3rd party)
+    AUDIO
+        midi: reading and writing of MIDI, no sending/receiving
+        hmidi: MIDI interface, sending/receiving
+        hcodec: has a MIDI codec
+        Haskore: used for analyzing, composing, and
+        manipulating music.
+        HasChorus: High level overlay for haskore
+        hmp3: mp3 player
