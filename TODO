@@ -41,6 +41,8 @@ INSTRUMENTS
 
 ARTWORK
     Particle simulation in a field
+    Fractal rendering
+        Using global parameters
 
 RULES
     RULE GENERATORS
