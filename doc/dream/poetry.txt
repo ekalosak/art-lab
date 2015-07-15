@@ -1,0 +1,11 @@
+To generate and sing poetry:
+    generate:
+        - Transformational Chomsky grammars with parameters
+            informed by the artist rules and global params
+        - Generative grammar using HMM
+        - Dictionaries of poetry and/or prose &c. for Markovian refference
+    sing:
+        - text to voice
+        - pitch shifting
+            - timbre, convolution with instruments
+            - other waveform modulations

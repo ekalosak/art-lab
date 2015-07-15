@@ -1,0 +1,13 @@
+The signal generators are embedded in time t->t+1
+    Rotations of groups -> signal (deterministic)
+    Markov model -> emmitted signal (stochastic)
+        Transformational grammar
+        Meta markov:
+            stay in 1 w high p, modulate to 5, return.
+            Assign sonnatal grammar, recover other grammars from other music styles
+            Parts of musical speech
+
+    User input -> signal (stochastic)
+    Chaotic system -> signal (quasi-stochastic)
+
+

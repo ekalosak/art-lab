@@ -1,0 +1,5 @@
+Sample rate (bitcrushing)
+Scale-setting (i.e., scale1=['bf1','c2','ef2',...])
+Distortion
+Panning
+

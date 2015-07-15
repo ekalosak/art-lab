@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # art-lab
 
 "Restrictions make the best art."
@@ -70,7 +69,3 @@ STRUCTURE:
 This package is structured according to the outline provided
     on:
     https://wiki.haskell.org/Structure_of_a_Haskell_project
-
-=======
-# haskell-template
->>>>>>> 0b5e3ea0b0683079eec5d86f706aacb1d6dcbdbb

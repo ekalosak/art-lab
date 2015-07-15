@@ -1,0 +1,12 @@
+RULE GENERATORS
+    Metarules for creating collectives, artists,
+    rules, instruments, etc. kinda like the C=CAT
+SIGNAL GENERATORS/PROCESSORS
+    Rotations of groups modulo primes
+    States of chaotic systems
+    Markov models
+    User input
+    Neural nets / rand forests / other ML
+    Weather, etc.
+    Abstract mathematical objects and morphisms
+

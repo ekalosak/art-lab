@@ -1,0 +1,29 @@
+TODO
+1. Dream project
+2. Design project
+
+PACKAGES (3rd party)
+    AUDIO
+        midi: reading and writing of MIDI, no sending/receiving
+        hmidi: MIDI interface, sending/receiving
+        hcodec: has a MIDI codec
+        Haskore: used for analyzing, composing, and
+            manipulating music.
+        HasChorus: High level overlay for haskore
+        hmp3: mp3 player
+    MACHINE LEARNING
+        hlearn: category theoretic machine learning package
+            developed by Microsoft
+
+PACKAGES (what I want)
+    OS-ish
+        python interface
+        octave interface
+        image interface
+    AUDIO
+        midi to speakers
+    GRAMMAR
+    MACHINE LEARNING
+    IMAGE PROCESSING
+        sheet music to machine readable musical representation
+    COMPUTER VISION

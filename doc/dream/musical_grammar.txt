@@ -1,0 +1,59 @@
+How to assign a grammar to music?
+    Use transformational Chomskian grammars
+        Strings of words can be generated using set theoretic concepts
+            e.g. the group over time (e.g. discreet group operations)
+            can be a representation of sequential words generated
+            by a small grammar.
+    Dictionaries of inspiration are sheet music
+        Direct, symbolic representations
+        Would have to do the equvalent of speech recognition othw.
+        Still, sheet-to-note is a huge undertaking
+    Neural networks and/or random forests for learning the grammar
+
+A Bayes net for scale selection in a voice e.g. switch to aeolian
+    from ionian with probability p, etc.
+Bayes net for melodic construction including access to past rendering
+    and potential future paths. Dynamic programming-style with adaptive,
+    programmable cost functions.
+
+Two main styles:
+    Classical: wherein the piece is rendered as a whole, with
+        internal universal knowledge of the overall structure,
+        the artists all know everything, including future projected
+        paths. Multiple artists can join into blackboxes for chords
+        or backup or something and then they can break back into
+        individual voices. Events need concrete semantics - the model
+        for musical development in my head is to put tight constraints
+        in order to understand, then loosen to get the zen of it.
+    Jazz: wherein the piece is rendered note by note, each artist with
+        a peculiar personality and knowledge only of the piece's structure,
+        past notes played, future personal projected trajectories.
+        Queues may be musical or "visual" i.e., artists pass direct
+        indicative objects not rendered into notes but included in behavior.
+
+Creation of phrases for playing, saving, repitition
+    Really, creation of any hierarchical object in the musical grammar.
+    This is unfortunately reductionist and may very well lead to
+        chunks and pieces that are individually coherent but globally
+        uninteresting. A transition to continuous rather than discrete
+        hierarchical gramar would aleviate this pieces-not-whole condition.
+
+Turk out musical preferences e.g. enter your genre classification
+    of this little tune, enter your favorite generes, artists,
+    etc. to train the engine to understand its creations.
+
+Example of a hierarchical grammar for musical sentences is:
+    Piece
+        Movement
+            Phrases
+                Words
+                    Phonemes
+                        Notes
+    e.g., Piece is 1-5-1 with length and similarity parameters,
+                mood parameters (govng: scale transition probs),
+                necessary semantic events, etc.
+          Movement is e.g. expository (generates phrases),
+                recapitulatory (revisits phrases), etc.
+                Can modify global parameters if need be, tacks on
+                to the "system state" other params.
+          Phrases similarly.
