@@ -1,5 +1,36 @@
-You'll need the Haskell package (google it)
-Then you'll need to install the followind dependencies if you haven't already:
-    cabal: Haskell package manager
+This memo contains the instructions for installing the "art-lab" application on
+    a Mac running OsX El Cap
+    Lines starting with "$" are bash commands, copy them without the "$" to the
+    commandline to execute them.
+
+Install Haskell (gch/gchi) from https://www.haskell.org/
+Install the following dependencies
+    cabal: Haskell package manager;
+        should come installed with the "full" install from haskell.org;
+        Update cabal package list:
+            $ cabal update
+        Create a virtual environment or the application
+            $ cabal sandbox init
     quickcheck: Haskell automated unit test generator
+        $ cabal install quickcheck
     Hunit: unit test utility for Haskell
+        $ cabal install Hunit
+    OpenAL: sound library
+        $ cabal install openal
+    ALUT: OpenAL toolkit, these instructions install some compiler tools
+        $ git clone https://github.com/vancegroup/freealut.git
+        $ brew install cmake
+        Follow the instructions in the ./freeault/README
+            $ cabal install happy
+            $ cabal install alex
+            $ cabal install c2hs
+            $ cabal install stack
+    synthesizer-core:
+        $ cabal install synthesizer-core
+        $ cabal install midi
+    Euterpa
+        $ cabal isntall Euterpea
+
+Compile the application
+    (https://downloads.haskell.org/~ghc/5.00/docs/set/make-mode.html)
+    $ ghc --make src/Main.hs
