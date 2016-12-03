@@ -15,19 +15,7 @@ Install the following dependencies
         $ cabal install quickcheck
     Hunit: unit test utility for Haskell
         $ cabal install Hunit
-    OpenAL: sound library
-        $ cabal install openal
-    ALUT: OpenAL toolkit, these instructions install some compiler tools
-        $ git clone https://github.com/vancegroup/freealut.git
-        $ brew install cmake
-        Follow the instructions in the ./freeault/README
-            $ cabal install happy
-            $ cabal install alex
-            $ cabal install c2hs
-            $ cabal install stack
-    synthesizer-core:
-        $ cabal install synthesizer-core
-        $ cabal install midi
+
     Euterpa
         $ cabal isntall Euterpea
 
