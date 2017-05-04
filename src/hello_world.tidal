@@ -1,1 +1,49 @@
-d1 $ sound "bd sn sn sn"
+-- requires: Atom editor with TidalCycles plugin, SuperCollider
+-- start up SuperCollider, open and run hello_supercollider.srd
+-- then go to packages >> TidalCycles >> boot tidal cycles
+
+-- d1 $ sound $ (slow 2) "bd sn sn sn"
+
+d4 $ sound $ "hh*4 hh*4"
+d4 $ silence
+
+d6 $ sound "sn sn"
+   # gain "1.2"
+   # crush "3"
+   -- # gain "0.8 0.7"
+d6 $ silence
+
+d2 $ sound "sn*4"
+   # speed ((*2) <$> saw)
+d2 $ sound "[[arpy:4 arpy:3] arpy:0]"
+   # crush "4"
+d2 $ silence
+
+d5 $ every 4 (slow 2) $ every 4 (rev) (sound "arpy:0 arpy:1*2 arpy:2*3 arpy:3")
+   # speed ((*2) <$> saw)
+   # crush "6"
+d5 $ silence
+
+d1 $ sound "arpy:0 arpy:1*1 arpy:2 arpy:1"
+   -- # gain "1"
+   # speed ((*1) <$> saw)
+   # crush "8"
+d1 $ silence
+
+d8 $ sound "bass*7"
+   # speed "1 0.5"
+   # gain ((*1) <$> sine)
+d8 $ silence
+
+d3 $ sound "[arpy(3,8), sn sn]"
+d3 $ up "[0 4 7]*4" # sound "arpy" # gain "0.9"
+d3 $ silence
+
+d9 $ up "0 12 11 7" # sound "arpy" # crush "3"
+d9 $ silence
+
+hush
+
+d7 $ sound "bd bd*2 sn sn"
+   # speed ((*7) <$> saw)
+d7 $ silence
