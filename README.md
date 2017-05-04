@@ -69,3 +69,31 @@ STRUCTURE:
 This package is structured according to the outline provided
     on:
     https://wiki.haskell.org/Structure_of_a_Haskell_project
+
+MODULE IDEAS:
+1. Songs
+    1.1 Emulate Knee Play 1 by P Glass off of Einstein o t Beach, Vocal numbers
+    and organ instruments, fugue of text read by e.g. computer
+    1.2 Dan Deacon, Panda Bear
+2. Build library of parameterized instruments and a framework for coordinating
+   them
+    2.1 Noise, synths, sample manipulators, signal mimickers, text readers
+    2.2 Need filters e.g. apply envelopes like drum amplitude to synth amp,
+    reverb, low pass, etc.
+        2.2.1 Two major classes: synthesizers and patches
+            Synth takes Music Pitch, parameters and returns waveform
+                E.g. sinewave
+            Patch takes waveform, parameters and returns waveform
+                E.g. low pass, 8bit-ify, punch, fuzz, reverb, vibrato, trill,
+                embelleshment, autoregressive harmonizing, harmonizer, octave as
+                special case of harmonizer
+    2.3 Drums
+        Just a synthesizer - takes Music Pitch and makes waveform
+        2.3.1 Wishlist: hihat, toms, snare, bass all parameterized
+    2.4 The coordination framework is a module
+3. Image processor (e.g. NN) that passes different signals based on different
+   learned and/or engineered image features to a collection of instrumentalists
+   who play based on their own imperitive and the image. In a sense, this
+   "soundifies" images / video.
+   3.1 Feedback image generation based on the music created from the image
+   3.2 Musicify signals from a game of Go or Chess or tic tac toe
