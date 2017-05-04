@@ -67,6 +67,29 @@ sineInstr dur pch vol params =
          y <- osc sineTable 0 -< freq
          returnA -< y
 
+sineInstr2 :: Instr (Mono AudRate)
+sineInstr2 dur pch vol params =
+    let freq = apToHz pch
+        d = fromRational dur
+    in  proc _ -> do
+        y <- osc sineTable 0 -< freq
+        e <- envLineSeg [0,1,1,0] [0.01*d, 0.94*d, 0.05*d] -< ()
+        returnA -< y*e
+
+sineName, sineName2 :: InstrumentName
+sineName = CustomInstrument "Sine"
+sineName2 = CustomInstrument "Sine2"
+
+instrMap :: InstrMap (Mono AudRate)
+instrMap = [(sineName, sineInstr), (sineName2, sineInstr2)]
+
+myMel = instrument sineName $
+    line [c 4 qn, e 4 qn, g 4 qn, c 5 qn]
+testMyMel = writeWav "mymel.wav" instrMap myMel
+mySineMel2 = instrument sineName2 $
+    line [c 4 qn, e 4 qn, g 4 qn, c 5 qn]
+testMyMel2 = writeWav "mymel2.wav" instrMap mySineMel2
+
 -- devices, this will show input and output devices for MIDI
 -- TODO: setup the MIDI so I can do live input/output
 -- in ghci, with :l synth_sand.hs, type testSine440 to make it output the .wav
