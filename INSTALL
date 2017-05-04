@@ -16,8 +16,11 @@ Install the following dependencies
     Hunit: unit test utility for Haskell
         $ cabal install Hunit
 
-    Euterpa
+    Euterpa: Music language out of Yale
         $ cabal isntall Euterpea
+
+    Tidal: Pattern language for improvised music
+        $ cabal install tidal
 
 Compile the application
     (https://downloads.haskell.org/~ghc/5.00/docs/set/make-mode.html)
