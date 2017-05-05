@@ -1,0 +1,31 @@
+-- rotate c f bb eb ab
+let c = "0 4 7 11"
+let f = "5 9 12 15"
+let bb = "10 2 5 10"
+let eb = "3 7 10 1"
+let ab = "8 12 3 -4"
+
+let chords = [c, f, bb, eb, ab]
+let stuff = "0"
+
+let q = foldr append c [f,bb]
+let r = cat [f,c,eb]
+
+d1 $ up r # sound "arpy"
+d1 silence
+
+d2 $ sound "hh*8" # gain "0.9"
+d2 silence
+
+-- d3 $ cat [sound x | x <- stuff]
+d3 $ brak $ (slowcat $ [up x # sound "arpy" | x <- chords])
+   # crush "3"
+d3 silence
+
+d4 $ striate' 2 (1/16) $ sound "[bd sn:2]*2"
+   # gain "0.8"
+d4 $ swingBy (1/3) 4 $ sound "bd*2"
+d4 silence
+
+[x*2 | x <- [1..10]]
+hush
