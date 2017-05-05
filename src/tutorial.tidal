@@ -1,0 +1,28 @@
+let a = "0 7 12 10"
+let b = " 7 11 2 6"
+let c = cat $ [a,b]
+let d = "-10*2 -7*2"
+let e = "2*2 -7*2"
+
+d5 $ striate 1 $ jux (rev) $ up a # sound "arpy"
+   # crush "5"
+
+d1 $ striate 2 $ up e # sound "arpy"
+   # crush "6"
+d1 silence
+
+d2 $ up a # sound "arpy" # gain "1.1"
+   # crush "3"
+d2 silence
+
+d3 $ sound "hh*8" # gain ((*1.3) <$> sine)
+d4 $ sound "hh*2 bass*4" # speed ((*2) <$> sine)
+   # crush "3"
+d5 $ sound (brak "bd sn kurt arpy:1")
+hush
+
+d3 silence
+d4 silence
+d5 silence
+
+import Data.String
