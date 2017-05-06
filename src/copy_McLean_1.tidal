@@ -1,0 +1,57 @@
+-- SuperDirt synth for SuperColider samples found in
+-- ~/Library/Application Support/SuperCollider/downloaded-quarks/Dirt-Samples
+d1 $ brak $ n "1 2 3 4" # sound "pad" # gain "1.1"
+d1 $ when ((elem '1').show) (striate 4)
+   $ n "1 2 3 4" # sound "flick"
+   # room "0.9"
+d1 $ n "1 2 3 4" # sound "flick"
+   # crush "7"
+d1 $ sound "bd:1(1,8) [sn:1 ~] [hh sn:1]"
+   # room "0.9"
+d1 silence
+
+let a = "0 ~ [2 ~ 3 5] ~ 8"
+d2 $ up a # sound "bottle"
+   # crush "4"
+d2 silence
+
+let b1 = "0 5 7 11"
+let b2 = "0 4 7 ~ 10 12 14"
+let b3 = "-1 2 7 11 13"
+d3 $ slow 3 $ e 11 24 $ up b1 # sound "arpy" # gain "0.8"
+d3 $ up (slowcat [b2, b3]) # sound "casio"
+d3 silence
+
+let c = "0(2,5)"
+let c = "0(3,4)"
+let c = "0(3,5,2)"
+let c = "0(5,6)"
+let d = "1(11,24,14)" -- African rhythm (https://tidalcycles.org/patterns.html#bjorklund)
+d4 $ slow 3 $ up d # sound "bd"
+d4 $ every 7 (striate 7) $ every 9 (slow 0.5) $ slow 1 $ up c # sound "bd"
+d4 silence
+
+d5 $ sound "arpy*16" # up (run 8)
+d5 $ slow 2 $ e 7 24 $ n "0 ~ 2 3 5 7" # s "arpy" # crush "4" -- for African
+d5 $ every 3 (striate 2) $ every 4 (slow 0.5) $ every 5 (brak) $
+   n "0 2 3? 5 7" # s "arpy"
+   # room "0.5" # crush "4" # gain "0.9"
+d5 $ every 2 (striate 4) $ every 3 (rev) $ n "0 2 3? 5 6" # s "arpy"
+   # crush "4"
+d5 $ n "0 2 3 4 [3 2 3]" # s "arpy" # crush "4"
+d5 silence
+
+hush
+
+d6 $ every 7 (brak) $ every 4 (slow 2) $ s "hh*10"
+   # pan (sine)
+d6 $ sound "{[bottle hh*3 bottle], [hh*4]}" # gain "0.8"
+d6 silence
+cps 1.5
+cps 0.75
+cps (230/60/4)
+
+d7 $ every 5 (|+| speed "0.2") $ every 4 (striate 3) $ every 3 (rev) $
+   sound "hh*5"
+   # speed "[1 1.25 0.75 -1.5]/3" -- ripped straight from https://tidalcycles.org/patterns.html
+d7 silence
